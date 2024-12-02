@@ -315,6 +315,9 @@ section + section:not([class^="bg-"]) {
   width: 24px;
   height: 24px;
 }
+.nav-item {
+  font-size: 14px;
+}
 .section-background {
   background-image: none;
   color: black;
