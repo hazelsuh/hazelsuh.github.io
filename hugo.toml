@@ -1,0 +1,6 @@
+baseURL = '/'
+languageCode = 'ko-kr'
+hasCJKLanguage = true
+title = 'My New Hugo Site'
+theme = 'hazelsuh'
+publishDir = "public"
