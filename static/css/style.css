@@ -67,7 +67,7 @@ body {
 }
 .hero .content {
   z-index: 1;
-  padding: 220px 0 160px;
+  padding: 160px 0 140px;
 }
 .bg-primary {
   background-color: var(--bs-primary) !important;
