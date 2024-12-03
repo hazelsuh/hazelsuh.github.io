@@ -4,8 +4,8 @@
   --bs-primary-bg-subtle: #4d7fff;
   --bs-primary-border-subtle: #4d7fff;
   --bs-primary-dark: #2420e0;
-  --color-bg1: rgb(242, 243, 248);
-  --color-bg2: rgb(244, 246, 248);
+  --color-bg1: rgb(26, 28, 31);
+  --color-bg2: rgb(26, 28, 31);
   --color1: 161, 176, 248;
   --color2: 167, 210, 250;
   --color3: 184, 213, 243;
@@ -22,7 +22,12 @@ body {
   word-break: keep-all;
   overflow-wrap: break-word;
   line-height: 1.4;
+  color: #333;
+  /* background-color: #d4d2d0; */
 }
+/* .bg-body-tertiary {
+  background-color: #bfbcba !important;
+} */
 .herocard {
   position: absolute;
   z-index: 10;
@@ -38,30 +43,31 @@ body {
 }
 .hero {
   position: relative;
-  height: 90vh;
+  margin: 0;
+  padding: 0;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #333;
 }
 .hero video {
   position: absolute;
-  top: 68%;
-  left: 50%;
+  top: 73%;
+  left: 80%;
   transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
   object-fit: cover;
-  width: 100%; /* Adjust the width as needed */
+  width: 60%; /* Adjust the width as needed */
   height: auto;
-  clip-path: inset(0 0 200px 0);
+  clip-path: inset(0 0 100px 0);
   z-index: -1;
+  /* filter: invert(1); */
+  /* opacity: 0.7; */
 }
 .hero .content {
-  text-align: center;
   z-index: 1;
+  padding: 220px 0 160px;
 }
 .bg-primary {
   background-color: var(--bs-primary) !important;
@@ -288,13 +294,11 @@ body {
 .animated-text-1 {
   animation: fadeIn 1s forwards;
   animation-delay: 0s;
-  color: #0e1f15;
 }
 .animated-text-2 {
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 0.5s;
-  color: #0e1f15;
 }
 .container {
   width: 1280px;
@@ -316,6 +320,12 @@ section + section:not([class^="bg-"]) {
   height: 24px;
 }
 .nav-item {
+  font-size: 14px;
+}
+.nav-link {
+  color: #333;
+}
+.dropdown-item {
   font-size: 14px;
 }
 .section-background {
@@ -348,27 +358,6 @@ section + section:not([class^="bg-"]) {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-5%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-.animated-text-1 {
-  animation: fadeIn 1s forwards;
-  animation-delay: 0s;
-  color: #0e1f15;
-}
-.animated-text-2 {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
-  color: #0e1f15;
 }
 .sticky-banner {
   background-image: url(https://res.cloudinary.com/zuzu-homepage/image/upload/q_auto,f_auto/q_10,f_auto/yyfgfnlw1vnz4exwk6ii);
@@ -518,7 +507,7 @@ section + section:not([class^="bg-"]) {
 }
 .footer-text {
   font-size: 0.8rem;
-  color: #888;
+  color: #666;
 }
 .footer-term-wrapper {
   display: inline-grid;
