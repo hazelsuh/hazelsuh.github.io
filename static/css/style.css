@@ -54,11 +54,11 @@ body {
 }
 .hero video {
   position: absolute;
-  top: 73%;
-  left: 80%;
+  top: 75%;
+  left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  width: 60%; /* Adjust the width as needed */
+  width: 100%; /* Adjust the width as needed */
   height: auto;
   clip-path: inset(0 0 100px 0);
   z-index: -1;
@@ -68,6 +68,15 @@ body {
 .hero .content {
   z-index: 1;
   padding: 160px 0 140px;
+}
+.about-link {
+  cursor: pointer;
+  color: var(--bs-secondary-color) !important;
+  text-decoration: none !important;
+}
+.about-link:hover {
+  color: #6c757d !important;
+  cursor: pointer;
 }
 .bg-primary {
   background-color: var(--bs-primary) !important;
