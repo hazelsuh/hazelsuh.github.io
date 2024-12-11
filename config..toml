@@ -1,6 +1,0 @@
-baseURL = 'https://hazelsuh.netlify.app/'
-languageCode = 'ko-kr'
-hasCJKLanguage = true
-title = 'Hazelsuh'
-theme = 'hazelsuh'
-publishDir = "public"

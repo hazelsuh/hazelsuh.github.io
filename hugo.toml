@@ -1,0 +1,5 @@
+baseURL = "https://hazelsuh.netlify.app/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hazlesuh"
+publishDir = "public"
