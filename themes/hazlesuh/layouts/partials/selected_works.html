@@ -1,120 +1,42 @@
+{{ with .Site.Data.works }}
 <section id="work">
   <div class="container">
     <div class="row col-md-10 mb-0">
       <h2 class="mb-5" style="line-height: 1.4">Selected Works</h2>
 
-      <!-- 첫 번째 행 -->
+      {{ range . }}
       <div class="row mb-5 flex-column flex-md-row slide">
         <div class="col-md-4 mb-3 mb-md-0 mt-2">
-          <img
-            src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1733277140/zuzu-primary_qrjphe.png"
-            alt="logos"
-            class="me-2 mb-4"
-            height="19"
-          />
-          <h3 class="card-text">Reduce the burden of management.</h3>
-          <p class="card-text">
-            For companies, from corporate registration.<br />
-            For investors, from deal sourcing.
-          </p>
+          <img src="{{ .logo }}" alt="logo" class="me-2 mb-4" height="20" />
+          <h3 class="card-text">{{ .title }}</h3>
+          <p class="card-text">{{ .description | safeHTML }}</p>
           <div class="d-flex gap-2 mt-4">
             <button type="button" class="btn btn-dark disabled opacity-25">
               View work
             </button>
             <a
-              href="https://zuzu.network"
+              href="{{ .site }}"
               class="btn btn-outline-dark"
               role="button"
               target="_blank"
-              >Site <i class="bi bi-box-arrow-up-right"></i
-            ></a>
+            >
+              Site <i class="bi bi-box-arrow-up-right"></i>
+            </a>
           </div>
         </div>
         <div class="col-md-8">
           <img
-            src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208684/238423_zibcwg.png"
+            src="{{ .image }}"
             alt="image"
             class="w-100"
             style="border-radius: 16px"
           />
         </div>
       </div>
-
-      <!-- 두 번째 행 -->
-      <div class="row mb-5 flex-column flex-md-row slide">
-        <div class="col-md-4 mb-3 mb-md-0 mt-2">
-          <img
-            src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1733279520/LFFOOD_2_wkms7i.png"
-            alt="logos"
-            class="me-2 mb-4"
-            height="20"
-          />
-          <h3 class="card-text">
-            Streamline Ordering, Managing and Utilizing Global Food Ingredients.
-          </h3>
-          <p class="card-text">
-            An online marketplace for global food sourcing and tailored B2B
-            consulting.
-          </p>
-          <div class="d-flex gap-2 mt-4">
-            <button type="button" class="btn btn-dark disabled opacity-25">
-              View work
-            </button>
-            <a
-              href="https://www.lffood.co.kr/"
-              class="btn btn-outline-dark"
-              role="button"
-              target="_blank"
-              >Site <i class="bi bi-box-arrow-up-right"></i
-            ></a>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <img
-            src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png"
-            alt="image"
-            class="w-100"
-            style="border-radius: 16px"
-          />
-        </div>
-      </div>
-
-      <!-- 세 번째 행 -->
-      <div class="row mb-5 flex-column flex-md-row slide">
-        <div class="col-md-4 mb-3 mb-md-0 mt-2">
-          <img
-            src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1733908846/Group_1444_bwscgj.png"
-            alt="logos"
-            class="me-2 mb-4"
-            height="19"
-          />
-          <h3 class="card-text">Reduce the burden of management.</h3>
-          <p class="card-text">
-            For companies, from corporate registration.<br />
-            For investors, from deal sourcing.
-          </p>
-          <div class="d-flex gap-2 mt-4">
-            <button type="button" class="btn btn-dark disabled opacity-25">
-              View work
-            </button>
-            <a
-              href="https://zuzu.network"
-              class="btn btn-outline-dark"
-              role="button"
-              target="_blank"
-              >Site <i class="bi bi-box-arrow-up-right"></i
-            ></a>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <img
-            src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1733908846/Group_1444_bwscgj.png"
-            alt="image"
-            class="w-100"
-            style="border-radius: 16px"
-          />
-        </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 </section>
+{{ else }}
+<p>No works found</p>
+{{ end }}

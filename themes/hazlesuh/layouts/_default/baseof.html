@@ -9,7 +9,6 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
-    <meta name="description" content="Welcome to Hazel Suh Portfolio" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -31,9 +30,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
     />
 
-    <title>{{.Title}}</title>
+    <title>{{ .Title | default "Hazel Suh Portfolio" }}</title>
     <!-- ✅ Open Graph 기본 메타태그 -->
-    <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ .Params.description | default
     "Hazel Suh Portfolio" }}"> <meta property="og:image" content="{{
